@@ -34,6 +34,10 @@ const items = [
     name: "table",
     displayName: "Таблица",
   },
+  {
+    name: 'vadim',
+    displayName: "Вадим layout",
+  },
 ] as const satisfies Item[];
 
 const n = (key:keyof Item) => gfn<Item>(key);
