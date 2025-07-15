@@ -1,0 +1,1 @@
+export const gfn = <T>(key: keyof T) => key;

@@ -1,0 +1,17 @@
+.mybor {
+    border: 1px solid red;
+}
+
+.inset-0 {
+    inset: 0;
+}
+
+.prh100 {
+    position: relative;
+    height: 100%;
+}
+
+.pai0 {
+    position: absolute;
+    inset: 0;
+}

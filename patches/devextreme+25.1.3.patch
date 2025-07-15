@@ -1,0 +1,45 @@
+diff --git a/node_modules/devextreme/esm/__internal/core/license/license_validation.js b/node_modules/devextreme/esm/__internal/core/license/license_validation.js
+index daa1808..904bebd 100644
+--- a/node_modules/devextreme/esm/__internal/core/license/license_validation.js
++++ b/node_modules/devextreme/esm/__internal/core/license/license_validation.js
+@@ -195,38 +195,8 @@ function getLicenseCheckParams(_ref2) {
+         }
+     }
+ }
+-export function validateLicense(licenseKey) {
+-    let versionStr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fullVersion;
+-    if (validationPerformed) {
+-        return
+-    }
+-    validationPerformed = true;
+-    const version = parseVersion(versionStr);
+-    const versionsCompatible = assertedVersionsCompatible(version);
+-    const {
+-        internal: internal,
+-        error: error
+-    } = getLicenseCheckParams({
+-        licenseKey: licenseKey,
+-        version: version
+-    });
+-    if (!versionsCompatible && internal) {
+-        return
+-    }
+-    if (error && !internal) {
+-        const buyNowLink = config().buyNowLink ?? BUY_NOW_LINK;
+-        const licensingDocLink = config().licensingDocLink ?? LICENSING_DOC_LINK;
+-        showTrialPanel(buyNowLink, licensingDocLink, fullVersion)
+-    }
+-    const preview = isPreview(version.patch);
+-    if (error) {
+-        errors.log(preview ? "W0022" : error);
+-        return
+-    }
+-    if (preview && !internal) {
+-        errors.log("W0022")
+-    }
+-}
++export function validateLicense(licenseKey) { return; }
++
+ export function peekValidationPerformed() {
+     return validationPerformed
+ }
